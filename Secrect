@@ -1,13 +1,12 @@
-#include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-    string word = "Ocean", dashes = "_____", guess;
-    int letterGuesses = 5, wordGuesses = 3;
+    string word = "Man", dashes = "###", guess;
+    int letterGuesses = 10 , wordGuesses = 3;
 
     while (letterGuesses > 0 && wordGuesses > 0) {
-        cout << "Word: " << dashes << "\nGuesses left: " << letterGuesses << " letters, " << wordGuesses << " words\n";
+        cout << "Word Has 3 Letters " << dashes << "\nYour Guess Left = " << letterGuesses << " Letters of the word " << wordGuesses << " words\n";
         cout << "Guess: ";
         cin >> guess;
         if (guess.length() == 1) { // Guess letter
@@ -22,4 +21,3 @@ int main() {
     }
     cout << "Game over! The word was: " << word << endl;
     return 0;
-}
